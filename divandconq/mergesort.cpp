@@ -50,7 +50,8 @@ void mergesort(int arr[],int lo,int high){
     int middle=(high+lo)/2;
     mergesort(arr,lo,middle);
     mergesort(arr,middle+1,high);
-    merging(arr,lo,middle,high);
+    
+     merging(arr,lo,middle,high);
 }
 
 int main()
