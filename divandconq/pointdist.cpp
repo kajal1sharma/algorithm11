@@ -41,8 +41,8 @@ float bruteforce(Point p[],int n){
     return distance;
     
 }
-float stripminidist(Point strip[],int n){
-    float mindist=9999;
+float stripminidist(Point strip[],int n,int min){
+    float mindist=min;
     qsort(strip,n,sizeof(Point),compareyaxis);
     for(int i=0;i<n-1;i++){
         for(int j=i+1;j<n;j++){
@@ -72,13 +72,13 @@ float findclosest(Point p[],int n){
     int stripsize=0;
     Point strip[n];
     for(int i=0;i<n;i++){
-        if(abs(p[i].x-temp.x)<mini){
+        if(abs(p[i].x-temp.x)<=mini){
             strip[stripsize]=p[i];
             stripsize++;
         }
     }
     
-     float stripmini=stripminidist(strip,stripsize);
+     float stripmini=stripminidist(strip,stripsize,mini);
      
      if(stripmini<mini)
      return stripmini;
@@ -98,7 +98,7 @@ int main()
   p[1].x=2;
   p[1].y=3;
   
-  p[2].x=12;
+  p[2].x=9;
   p[2].y=5;
   
   p[3].x=12;
