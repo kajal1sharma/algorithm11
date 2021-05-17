@@ -37,7 +37,7 @@ bool knighttour(int board[8][8],int move ,int x,int y){
 
 int main()
 {
-   int board[][]={{0,0,0,0,0,0,0,0},
+   int board[8][8]={{0,0,0,0,0,0,0,0},
                     {0,0,0,0,0,0,0,0},
                     {0,0,0,0,0,0,0,0},
                     {0,0,0,0,0,0,0,0},
@@ -51,7 +51,7 @@ int main()
                     if(knighttour(board,2,0,0)==true){
                        for(int i=0;i<8;i++){
                            for(int j=0;j<8;j++){
-                               cout<<board[i][j]<<" "
+                               cout<<board[i][j]<<" ";
                            }
                            cout<<"\n";
                        } 
