@@ -26,6 +26,7 @@ bool constraintcheck(int board[9][9],int row,int col,int number){
             }
         }
     }
+    return true;
 }
 bool sudokusolver(int board[9][9],int row,int col){
     
